@@ -1,0 +1,32 @@
+Clone this repo and install dependencies:
+
+
+pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+Place your credentials.json in the root directory (from Google Cloud Console)
+
+Add your contacts to a Google Sheet with this format:
+
+
+| First name | Email           |
+|------------|-----------------|
+| Alice      | alice@email.com |
+| Bob        | bob@email.com   |
+Update the following in main.py:
+
+SHEET_ID → Your actual Google Sheet ID
+
+ATTACHMENT_PATH → Your resume file name if not resume.pdf
+
+Run the script:
+
+
+python main.py
+
+
+Points to check before executing- 
+Emails are personalized using the contact's first name.
+
+Resume is sent as a PDF attachment.
+
+Ensure you have API quota limits in mind for Gmail and Sheets.
+
